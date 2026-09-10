@@ -1,0 +1,29 @@
+{
+  "entities": {
+    "Enquiry": {
+      "title": "Enquiry",
+      "description": "Industrial quotation requests and client inquiries",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "company": { "type": "string" },
+        "productName": { "type": "string" },
+        "brandName": { "type": "string" },
+        "message": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "status": { "type": "string", "enum": ["Pending", "Contacted"] },
+        "notes": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["name", "email", "phone", "company", "message", "status"]
+    }
+  },
+  "firestore": {
+    "/enquiries/{enquiryId}": {
+      "entity": "Enquiry",
+      "description": "Customer inquiry records and lead logs"
+    }
+  }
+}

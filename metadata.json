@@ -1,0 +1,6 @@
+{
+  "name": "ACS Corporation",
+  "description": "ACS Corporation - Industrial distributor and supplier of OKS & Klüber specialty lubricants, greases, oils, and engineering supplies across India from Ghaziabad, UP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

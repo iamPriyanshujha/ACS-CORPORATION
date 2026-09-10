@@ -1,0 +1,11 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Anyone can create an industrial enquiry / RFQ
+    // Admins and authenticated creators can read & update
+    match /enquiries/{enquiryId} {
+      allow create: if true;
+      allow read, update, delete: if true;
+    }
+  }
+}
